@@ -45,17 +45,24 @@ header{
     gap: 3rem;
     font-weight: 300;
     cursor: pointer;
-    padding-left: 47%;
+    padding-left: 56%;
+    
 }
 
 .cabeçalho-link a{
-    color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.cabeçalho-link .ativo{
+    color: #3a4dff;
     font-size: 13px;
 
 }
 
 .cabeçalho-link a:hover{
-    color: rgb(255, 255, 255);
+    color: #0145ff;
     transition: 0.3s all;
 }
 
@@ -175,12 +182,12 @@ footer{
 
   .tabs {
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: flex-end;
-    height: 30vh;
+    flex-direction: center;
+    align-items: center;
+    justify-content: center;
     padding-bottom: 20px;
-    
+    height: 30vh;
+    margin-bottom: auto;
   }
   
   .tablink {
@@ -189,31 +196,47 @@ footer{
     color: #f7f7f7;
     padding: 10px 20px;
     cursor: pointer;
-    justify-content: flex-end;
+    justify-content: center;
+    
   }
   
   .tabcontent {
     
-    padding: 20px;
-    text-align: right;
+    padding: 10px;
+    text-align: center;
     color: #f7f7f7;
   }
   
 
-  .tablink.active {
+  .btn-secondary.active {
     background-color: #0043fc;
     border: none;
     color: #ffffff;
     padding: 10px 20px;
     cursor: pointer;
-    justify-content: flex-end;
+    justify-content: center;
     
   }
   
   .tabcontent.active {
     display: block;
-    justify-content: flex-end;
+    justify-content: center;
   }
+
+  .tabcontentx{
+    
+    padding: 10px;
+    text-align: center;
+    color: #f7f7f7;
+    
+  }
+
+  .tabcontentx.active {
+    display: block;
+    justify-content: center;
+  }
+
+  
 
   
 
