@@ -223,7 +223,7 @@ footer{
     justify-content: center;
   }
 
-  .tabcontentx{
+  .tabcontent{
     
     padding: 10px;
     text-align: center;
@@ -231,7 +231,7 @@ footer{
     
   }
 
-  .tabcontentx.active {
+  .tabcontent.active {
     display: block;
     justify-content: center;
   }
