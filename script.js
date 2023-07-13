@@ -31,17 +31,17 @@ showSlide(currentSlide);
 
 function openTab(event, tabName) {
   var i, tabcontent, tablinks;
-
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
-
   tablinks = document.getElementsByClassName("btn");
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].classList.remove("active");
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-
   document.getElementById(tabName).style.display = "block";
-  event.currentTarget.classList.add("active");
-}
+  event.currentTarget.className += " active";
+};
+
+
+
