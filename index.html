@@ -10,55 +10,62 @@
   <link rel="stylesheet" href="style.css">
 
 </head>
+
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-  <body>
 
-    <div class="background">
-      <header>
-        <div class="cabeçalho-link">
-          <li>
-            <a href="index.html" class="ativo">Home</a>
-          </li>
-          
-          <li>
-            <a href="sobre.html">About</a>
-          </li>
-          
-          <li>
-            <a href="Projetos.html">Projetos</a>
-          </li>
-          <a href="https://www.linkedin.com/in/brunobarcellostec/"><button>Meu LinkedIn</button></a>
-          </div>
-      </header>
-      <div class="container-txt">
-        <div class="text">
-          <h3>Seja bem vindo!</h3>
-          <h1>Minha página</h1>
-          <div class="foto-portifolio">
-            <img src="Meu projeto.png" alt="Minha foto">
-          </div>
-          <h2>Bruno Giovanni Barcellos</h2>
-          <div class="redes-sociais">
-            
-            <a href="https://api.whatsapp.com/send/?phone=31975181267&text&type=phone_number&app_absent=0"><i class="fa-brands fa-whatsapp"></i></a>
-          </div>
-        </div>
-    </div>
- 
-  <main>
-   
-   
-  </main>
+<body>
+  <div class="background">
+    <header>
+      <h1> Bruno <span>Barcellos</span></h1>
+      <nav>
+        <ul class="navegacao-primaria">
+          <li><a href="index.html" class="ativo">Home</a></li>
+          <li><a href="sobre.html">About</a></li>
+          <li><a href="projetos.html">Projects</a></li>
+          <a href="https://www.linkedin.com/in/brunobarcellostec/"><button type="button"></buttontype>Meu LinkedIn</button></a>
+      </nav>
+    </header>
+    <section aria-label="seção pagina inicial Bruno" class="section-div">
+      <div>
+        <h2>Olá, seja bem vindo</h2>
+        <h2>Meu nome é Bruno Barcellos</h2>
+        <p id="texto-digitando" class="digitando">Developer and Comedor de Xereka <p>
+       
+          <script>function ativaLetra(elemento){
+            const arrTexto = elemento.innerHTML.split('');
+            elemento.innerHTML = '';
+            arrTexto.forEach((letra, i)=>{
+            setTimeout(()=>{
+              elemento.innerHTML += letra;
+            }, 75 * i);
+            });
+          }
+          document.addEventListener('DOMContentLoaded', function() {
+            const titulo = document.querySelector('.digitando');
+            ativaLetra(titulo);
+          });</script>
+
+      </div>
+      <img src="Meu projeto.png" alt="Minha Foto PORTIFÓLIO" id="minha-foto">
+    </section>
+  </div>
+
 
   <footer>
     <p>&copy; 2023</p>
   </footer>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script> 
+
+
+
+
+
+
+  
   <script src="script.js"></script>
+  <script src="caminho/para/typed.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
 </body>
 </html>
