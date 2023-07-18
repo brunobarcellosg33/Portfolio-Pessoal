@@ -13,27 +13,48 @@
 
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-
+<!--Seção INICIAL-->
 <body>
   <div class="background">
-    <style>
-      .background {
-         background-image: url(27230.jpg);
-          max-width: 1000;
-        } 
-    </style>
 
     <header>
-      <h1> Bruno <span>Barcellos</span></h1>
-      <nav>
-        <ul class="navegacao-primaria">
-          <li><a href="index.html" class="ativo">Home</a></li>
-          <li><a href="sobre.html">About</a></li>
-          <li><a href="projetos.html">Projects</a></li>
-          <a href="https://www.linkedin.com/in/brunobarcellostec/"><button type="button"></buttontype>Meu LinkedIn</button></a>
-      </nav>
+      
+        <h1> Bruno <span>Barcellos</span></h1>
+        
+        <nav>
+          <ul class="navegacao-primaria">
+            <li><a href="#home" class="ativo">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#my-projects">Projects</a></li>
+            <a href="https://www.linkedin.com/in/brunobarcellostec/"><button type="button"></buttontype>Meu LinkedIn</button></a>
+        </nav>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const menuItems = document.querySelectorAll(".navegacao-primaria li a");
+            menuItems.forEach(function (menuItem) {
+              menuItem.addEventListener("click", function (event) {
+
+                if (this.getAttribute("href").startsWith("#")) {
+                  event.preventDefault();
+                  menuItems.forEach(function (item) {
+                    item.classList.remove("ativo");
+                  });
+                  this.classList.add("ativo");
+                  const targetId = this.getAttribute("href");
+                  const targetElement = document.querySelector(targetId);
+                  if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: "smooth" });
+                  }
+                }
+              });
+            });
+          });          
+        </script>
+        
+      </section>
     </header>
-    <section aria-label="seção pagina inicial Bruno" class="section-div">
+    <section aria-label="Pagina inicial Bruno" id="home" class="section-div">
       <div>
         <h2>Olá, seja bem vindo</h2>
         <h2>Meu nome é Bruno Barcellos</h2>
@@ -54,9 +75,79 @@
           });</script>
 
       </div>
+      
       <img src="Meu projeto.png" alt="Minha Foto PORTIFÓLIO" id="minha-foto">
-    </section>
+    
   </div>
+<!--Seção SOBRE MIM-->
+  <main>
+    <article aria-label="seção sobre mim" class ="sobre">
+      <section id="about">
+        <div class="background">
+        <section id="sobre-mim">
+            <h1>About Me</h1>
+            <p>Perfil Profissional e Currículo</p>
+        </section>
+      
+          <div class="tabs">
+            <button class="btn btn-primary btn-sm active" onclick="openTab(event, 'sobre')">Sobre Mim</button>
+            <button class="btn btn-primary btn-sm" onclick="openTab(event, 'skills')">Skills</button>
+            <button class="btn btn-primary btn-sm" onclick="openTab(event, 'curriculo')">Currículo</button>
+          </div>
+        
+          
+          <div id="sobre" class="tabcontent" style="display: block;">
+            <h2>Sobre Mim</h2>
+            <p>Teste Sobre</p>
+          </div>
+        
+          <div id="skills" class="tabcontent">
+            <h2>Skills</h2>
+            <ul>
+              <li>Teste1</li>
+              <li>Teste2</li>
+              <li>Teste3</li>
+            </ul>
+          </div>
+      
+          <div id= "curriculo" class="tabcontent">
+            <a href="BrunoGiovanni_Barcellos_CV (1).pdf" download="BrunoGiovanni_Barcellos_CV">Download CV</a>
+          </div>
+
+      </div>
+              <!--Seção PROJETOS-->
+
+   <article aria-label="seção de projetos" class="projects">
+        <section id="my-projects">
+            <div class="background">
+                <h1>Projetos</h1>
+                <p>Projetos realizados ou em andamento</p>
+            </div>
+            <div class="slider">
+                <div class="slide active">
+                    <img src="AZULDINAMICO.avif" alt="Imagem 1">
+                </div>
+                <div class="slide">
+                    <img src="CURRICULO.PNG" alt="Imagem 2">
+                </div>
+               <div class="slide">
+                    <img src="" alt="Imagem 3">
+                </div>
+                <div class="controls">
+                    <button class="prev-btn">Anterior</button>
+                    <button class="next-btn">Próximo</button>
+                </div>
+            </div>
+        </section>
+   </article>
+  </main>
+  <div class="whats">
+    <a href="https://wa.me/5531975181267?text=Olá Bruno, tudo bem?" target="_blank">
+    <img src="Meu projeto.png" width="30" alt="Contato" title="Contato WhatsApp"/>
+    </a>
+  </div>
+
+    
 
 
   <footer>
@@ -75,4 +166,6 @@
   <script src="caminho/para/typed.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
 </body>
+
+
 </html>
