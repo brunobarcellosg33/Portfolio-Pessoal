@@ -209,14 +209,14 @@ footer{
     align-items: center;
     justify-content: center;
     padding-bottom: 20px;
-    height: 30vh;
+    height: 25vh;
     margin-bottom: auto;
     color: #f8fdfb;
   
   }
   
 .tablink {
-    background-color: #dc9935;
+    background-color: #ff9900;
     border: none;
     color: #f8fdfb;
     padding: 10px 20px;
@@ -229,18 +229,33 @@ footer{
     
     padding: 10px;
     text-align: center;
-    color: #f8fdfb;
+    color: #ffffff;
     display: none;
     list-style: none;
-   
+    font-family: 'Lumanosimo';
+    text-shadow: 2px 2px 4px rgb(221, 255, 251); 
+
   }
+
+  .skill-icon {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.2s;
+    opacity: 0.6;
+  }
+
+  .skill-icon:hover {
+    transform: scale(1.1);
+    opacity: 1.0;
+  }
+
   
 
 .btn-secondary.active {
     background-color: #dc9935;
     border: none;
     color: #f8fdfb;
-    padding: 10px 20px;
+    padding: 10px 10px;
     cursor: pointer;
     justify-content: center;
     
@@ -253,29 +268,45 @@ footer{
     text-decoration: none;
   }
 
+  #curriculo.tabcontent {
+    height: 70px;
+  }
+
   #curriculo.tabcontent a {
     text-decoration: none;
     color: inherit;
     cursor: auto;
     color: #f8fdfb;
     background: transparent;
-    border: solid 1px #f8fdfb;
-    padding: 8px;
+    padding: 5px;
     border-radius: 15px;
     font-size: 13px;
-    width: 150px;
+    width: 140px;
     cursor: pointer;
+    position: sticky;
+    margin-top: 5px;
   }
   
   #curriculo.tabcontent a:hover {
     background-color: transparent;
     color: inherit;
     transition: none;
-    background-color: rgb(123, 41, 255);
     color: #f8fdfb;
     transition: 0.5s;
     
+  }
+
+  .cv-image {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s;
+    opacity: 0.6;
     }
+  
+ .cv-image:hover {
+    transform: scale(1.1);
+    opacity: 1.0;
+  }
 
  #minha-foto {
   box-shadow: 0px 0px 10px 2px rgb(24, 255, 228);
@@ -504,7 +535,7 @@ footer:hover {
 .whats {
   
   position: fixed; 
-  bottom: 15px;
+  bottom: 30px;
   right: 90px;
   z-index: 9999;
 
