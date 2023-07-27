@@ -1,4 +1,3 @@
 # Portifolio-Encaminhando
 
-Alterações em todo layout. 
-Adição de funções
+Portifólio pessoal com projetos e falando sobre mim.
