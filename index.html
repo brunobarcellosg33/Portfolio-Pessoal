@@ -144,23 +144,23 @@
         <div class="thumb">
             <img src="css-3.png" alt="Thumb 1">
             <div class="description">
-                Descrição da Thumb 1. Esta é uma descrição mais longa que será truncada inicialmente.
+              <div class="loading"> Carregando...</div>
             </div>
-            <button class="show-more-btn" onclick="showMoreDescription(this)">Mostrar mais</button>
+            <button class="show-more-btn" onclick="showMoreDescription(this)">Mais</button>
         </div>
         <div class="thumb">
             <img src="python.png" alt="Thumb 2">
             <div class="description">
-                Descrição da Thumb 2. Esta é outra descrição que também será truncada inicialmente.
+              <div class="loading"> Carregando...</div>
             </div>
-            <button class="show-more-btn" onclick="showMoreDescription(this)">Mostrar mais</button>
+            <button class="show-more-btn" onclick="showMoreDescription(this)">Mais</button>
         </div>
         <div class="thumb">
             <img src="java (1).png" alt="Thumb 3">
             <div class="description">
-               Em breve...            
+              <div class="loading"> Carregando...</div>    
               </div>
-            <button class="show-more-btn" onclick="showMoreDescription(this)">Mostrar mais</button>
+            <button class="show-more-btn" onclick="showMoreDescription(this)">Mais</button>
         </div>
 
     </div>
@@ -170,10 +170,10 @@
             const description = button.previousElementSibling;
             if (description.classList.contains('show-full')) {
                 description.classList.remove('show-full');
-                button.innerText = 'Mostrar mais';
+                button.innerText = 'Mais';
             } else {
                 description.classList.add('show-full');
-                button.innerText = 'Mostrar menos';
+                button.innerText = 'Menos';
             }
         }
     </script>
