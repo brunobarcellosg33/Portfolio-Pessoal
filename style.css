@@ -164,8 +164,15 @@ footer{
   width: 120px; 
   position: relative;
   transform: scale(1.0);
-  opacity: 1.0;
+  opacity: 0.6;
   box-shadow: 0 0 10px #18ffe4;
+  background-color: #000000;
+}
+
+.thumb:hover {
+  opacity: 1.0;
+  transform: scale(1.0);
+  transition: 0.5s;
 }
 
 .thumb .thumb-content {
@@ -180,13 +187,6 @@ footer{
   position: relative;
   opacity: 1.0;
 }
-
-.thumb img:hover {
-  transform: scale(0.9);
-  opacity: 0.6;
-
-}
-
 
 .thumb .description {
   margin-top: 5px;
