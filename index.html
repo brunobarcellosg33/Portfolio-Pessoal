@@ -19,7 +19,7 @@
 
     <header>
       
-        <h1> Bruno <span>Barcellos</span></h1>
+    <h1>Bruno <span>Barcellos</span></h1>
         
         <nav>
           <ul class="navegacao-primaria">
@@ -76,7 +76,7 @@
 
       </div>
       
-      <img src="Meu projeto.png" alt="Minha Foto PORTIFÓLIO" id="minha-foto">
+      <img src="Meu projeto.png" alt="Minha Foto PORTIFÓLIO" id="minha-foto" class="img-fluid">
     
   </div>
 <!--Seção SOBRE MIM-->
@@ -99,10 +99,10 @@
           <div id="sobre" class="tabcontent" style="display: block;">
             <h2>Sobre Mim</h2>
             <p>
-              Olá! Bruno aqui, estudante de Engenharia de Software na Estácio e apaixonado por tecnologia. Minha jornada acadêmica tem sido uma busca constante por aprendizado em diversas linguagens de programação e frameworks, além de aprofundar meus conhecimentos em design de software e solução de problemas complexos. A experiência em projetos de equipe me ajudou a desenvolver habilidades de colaboração e comunicação, essenciais para um desenvolvedor.
+              Olá! Bruno aqui, estudante de Engenharia de Software na Estácio e apaixonado por tecnologia. A experiência em projetos de equipe me ajudou a desenvolver habilidades de colaboração e comunicação, essenciais para um desenvolvedor.
             </p> 
-              Meu objetivo é construir uma carreira sólida como desenvolvedor, contribuindo para projetos inovadores e impactantes. Acredito que a tecnologia tem o poder de transformar a sociedade, e estou empenhado em fazer a diferença através do meu trabalho.              
-              Minha trajetória profissional também incluiu a oportunidade de trabalhar com a implantação de sistemas inovadores na indústria da saúde. Essa experiência me permitiu desenvolver habilidades sólidas em gerenciamento de projetos, treinamento de equipes e suporte técnico aos usuários. Estou comprometido em facilitar a adoção de soluções tecnológicas que impulsionem a eficiência e a qualidade dos serviços prestados na área da saúde.               
+              Meu objetivo é construir uma carreira sólida como desenvolvedor.
+              Minha trajetória profissional também incluiu a oportunidade de trabalhar com a implantação de sistemas na área da saúde.           
               No meu dia a dia, atuo no atendimento e análise de incidentes do sistema, onde a resolução rápida e eficaz é essencial para garantir a continuidade das operações dos nossos clientes.
             </p>
             <p>
@@ -113,10 +113,10 @@
           <div id="skills" class="tabcontent">
             <h3>Skills</h3>
             <ul>
+            <img src="java (1).png" class="skill-icon" alt="JAVA" title="JAVA">
             <img src="html-5.png" class="skill-icon" alt="HTML" title="HTML">
             <img src="css-3.png" class="skill-icon" alt="CSS" title="CSS">
             <img src="java-script.png" class="skill-icon" alt="JavaScript" title="JavaScript">
-            <img src="java (1).png" class="skill-icon" alt="JAVA" title="JAVA">
             <img src="python.png" class="skill-icon" alt="PYTHON" title="Python">
             <img src="1012821_code_development_logo_mysql_icon.png" class="skill-icon" alt="MySQL" title="MySQL">
             
@@ -131,40 +131,64 @@
           </div>
 
       </div>
+
 <!--Seção PROJETOS-->
-   <article aria-label="seção de projetos" class="projects">
-        <section id="my-projects">
-            <div class="background">
-                <h1>Projetos</h1>
-                <p>Seção em desenvolvimento......</p>
+
+<article aria-label="seção de projetos" class="projects">
+  <section id="my-projects">
+      <div class="background">
+          <h1>Projetos</h1>
+          <p>Seção em desenvolvimento......</p>
+      </div>
+      <div class="thumbs-container">
+        <div class="thumb">
+            <img src="css-3.png" alt="Thumb 1">
+            <div class="description">
+                Descrição da Thumb 1. Esta é uma descrição mais longa que será truncada inicialmente.
             </div>
-            <div class="slider">
-                <div class="slide active">
-                    <img src="AZULDINAMICO.avif" alt="Imagem 1" title="">
-                </div>
-                <div class="slide">
-                    <img src="CURRICULO.PNG" alt="Imagem 2">
-                </div>
-               <div class="slide">
-                    <img src="" alt="Imagem 3">
-                </div>
-                <div class="controls">
-                    <button class="prev-btn">Anterior</button>
-                    <button class="next-btn">Próximo</button>
-                </div>
+            <button class="show-more-btn" onclick="showMoreDescription(this)">Mostrar mais</button>
+        </div>
+        <div class="thumb">
+            <img src="python.png" alt="Thumb 2">
+            <div class="description">
+                Descrição da Thumb 2. Esta é outra descrição que também será truncada inicialmente.
             </div>
-        </section>
-   </article>
-  </main>
+            <button class="show-more-btn" onclick="showMoreDescription(this)">Mostrar mais</button>
+        </div>
+        <div class="thumb">
+            <img src="java (1).png" alt="Thumb 3">
+            <div class="description">
+               Em breve...            
+              </div>
+            <button class="show-more-btn" onclick="showMoreDescription(this)">Mostrar mais</button>
+        </div>
+
+    </div>
+
+    <script>
+        function showMoreDescription(button) {
+            const description = button.previousElementSibling;
+            if (description.classList.contains('show-full')) {
+                description.classList.remove('show-full');
+                button.innerText = 'Mostrar mais';
+            } else {
+                description.classList.add('show-full');
+                button.innerText = 'Mostrar menos';
+            }
+        }
+    </script>
+  </section>
+</article>
+</main>
 
 
 
 
-  <div class="whats">
-    <a href="https://wa.me/5531975181267?text=Olá Bruno, tudo bem?" target="_blank">
-    <img src="wpplogo.png" class="wpp-icon" width="25" alt="Contato" title="Contato WhatsApp"/>
-    </a>
-  </div>
+<div class="whats">
+<a href="https://wa.me/5531975181267?text=Olá Bruno, tudo bem?" target="_blank">
+<img src="wpplogo.png" class="wpp-icon" width="25" alt="Contato" title="Contato WhatsApp"/>
+</a>
+</div>
 
     
 
