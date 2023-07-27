@@ -215,6 +215,15 @@ footer{
   color: #18ffe4;
 }
 
+@keyframes loadingAnimation {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.loading {
+  animation: loadingAnimation 1.5s infinite;
+}
+
 .controls {
     position: absolute;
     bottom: 30px;
