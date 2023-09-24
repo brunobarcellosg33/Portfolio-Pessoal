@@ -1,3 +1,4 @@
+
 function openTab(event, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -13,4 +14,7 @@ function openTab(event, tabName) {
 };
 
 
-
+// Div redirectToURL clicável
+function redirectToURL(url) {
+  window.open(url, '_blank');
+}
